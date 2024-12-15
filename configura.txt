@@ -1,0 +1,8 @@
+## Subir info a git
+
+    - git add .
+    - git commit -m "esto"
+    - git ...
+    - git push origin main
+
+
