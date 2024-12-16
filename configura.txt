@@ -6,3 +6,45 @@
     - git push origin main
 
 
+
+
+## Usar Shell de django
+
+    python manage.py shell
+
+## USAR ORM desde Shell
+
+    from center.models import Center
+    from vaccine.models import Vaccine
+
+    center1 = Center(name = "ABC Hospital", address = "Something in the earth")
+    center1
+    center1.name
+    center1.address
+
+## USAR CONSULTAS CON ORM
+    Center.objects.all()
+
+## Guardar un registro con .save()
+    center1.save()
+    Center.objects.all()
+
+## Creando centros .create()
+    center2 = Center.objects.create(name="XYZ Hospital", address="Something new")
+    Center.objects.all()
+
+## Creando vaccines .create()
+    vaccine1 = Vaccine.objects.create(name="My Vaccine",
+    description = "Covid-19 vaccine2",
+    number_of_doses=1,
+    interval = 1,
+    storage_temperature=10,
+    miimun_age=18)
+
+    vaccine1
+    Vaccine.objects.all()
+
+## SALIR DEL SHELL DE Django
+    exit()
+
+
